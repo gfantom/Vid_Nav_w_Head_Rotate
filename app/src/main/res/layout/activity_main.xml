@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="544dp"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/vidTime"
+        android:layout_width="190dp"
+        android:layout_height="58dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="32dp" />
+
+    <Chronometer
+        android:id="@+id/elapsed"
+        android:layout_width="263dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:gravity="center"
+        android:textSize="28dp" />
+
+    <Button
+        android:id="@+id/min3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/min1"
+        android:layout_alignParentStart="true"
+        android:onClick="set3Min"
+        android:text="25 min" />
+
+    <Button
+        android:id="@+id/min1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/resetButton"
+        android:layout_alignParentStart="true"
+        android:onClick="set1Min"
+        android:text="10 min" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="103dp"
+        android:onClick="reset"
+        android:text="Reset" />
+
+    <Button
+        android:id="@+id/min10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/min3"
+        android:layout_alignParentStart="true"
+        android:onClick="set10Min"
+        android:text="1.5 hr" />
+
+    <TextView
+        android:id="@+id/targetTime"
+        android:layout_width="231dp"
+        android:layout_height="46dp"
+        android:layout_above="@+id/seekBar"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="target: 135/180" />
+
+    <Switch
+        android:id="@+id/tiltSwitch"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/elapsed"
+        android:layout_alignEnd="@+id/seekBar"
+        android:text="head tilt"
+        android:thumbTextPadding="2dp" />
+
+    <Button
+        android:id="@+id/tiltButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/targetTime"
+        android:layout_alignEnd="@+id/seekBar"
+        android:text="tilt" />
+
+    <TextView
+        android:id="@+id/angleText"
+        android:layout_width="115dp"
+        android:layout_height="59dp"
+        android:layout_alignEnd="@+id/seekBar"
+        android:layout_below="@+id/min3"
+        android:layout_marginTop="-23dp"
+        android:gravity="left"
+        android:paddingLeft="10dp"
+        android:text="angle:\n0.00"
+        android:textSize="18dp" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/elapsedTime"-->
+        <!--android:layout_width="309dp"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:gravity="center"-->
+        <!--android:text="TextView"-->
+        <!--android:textSize="28dp" />-->
+</RelativeLayout>
